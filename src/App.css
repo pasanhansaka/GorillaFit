@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -181,4 +181,29 @@
     right: 0;
     border-right-color: var(--border);
   }
+} */
+
+:root {
+  --black: #040304;
+  --white: #f1f0eb;
+  --darkbrown: #292113;
+  --darkyellow: #d5a310;
+  --darkgray: #2c2c2c;
+  --calorycard: #656565;
+  --plancard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --appcolor: #3c3f45;
+}
+
+.App {
+  background-image: url(data:image/png;base64,);
+  mix-blend-mode: overlay;
+  background-color: var(--appcolor);
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
