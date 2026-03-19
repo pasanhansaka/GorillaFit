@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { FiSend, FiCheckCircle } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [isSuccess, setIsSuccess] = useState(false);
+  const formRef = useRef();
   const {
     register,
     handleSubmit,
@@ -13,15 +15,20 @@ export default function ContactForm() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log('Form data:', data);
-    setIsSuccess(true);
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSuccess(false), 5000);
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      setIsSuccess(true);
+      reset();
+    } catch (error) {
+      console.error('Email failed:', error);
+    }
   };
+
 
   return (
     <section id="contact" className="py-24 bg-light dark:bg-dark relative overflow-hidden">
@@ -82,7 +89,7 @@ export default function ContactForm() {
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wide">Full Name</label>
@@ -103,9 +110,9 @@ export default function ContactForm() {
                     type="email"
                     className={`w-full px-5 py-4 rounded-xl bg-gray-50 dark:bg-dark border focus:ring-2 focus:outline-none transition-colors ${errors.email ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-primary/20 text-dark dark:text-light'}`}
                     placeholder="john@example.com"
-                    {...register('email', { 
-                      required: 'Email is required', 
-                      pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' } 
+                    {...register('email', {
+                      required: 'Email is required',
+                      pattern: { value: /^\S+@\S+$/i, message: 'Invalid email address' }
                     })}
                   />
                   {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
