@@ -70,7 +70,7 @@ export function PricingCard({ plan, price, features, isPopular = false }) {
 
       <h3 className="text-2xl font-bold mb-2">{plan}</h3>
       <div className="flex items-baseline mb-6">
-        <span className="text-4xl font-black font-heading">${price}</span>
+        <span className="text-4xl font-black font-heading">Rs.{price}</span>
         <span className={`ml-2 ${isPopular ? 'text-gray-400' : 'text-gray-500 dark:text-gray-400'}`}>/month</span>
       </div>
 
