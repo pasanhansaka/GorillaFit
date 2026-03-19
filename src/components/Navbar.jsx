@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
 import { useTheme } from '../hooks/useTheme';
+import logo from '../assets/gym-logo.jpg';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
@@ -34,10 +35,11 @@ export default function Navbar() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='flex justify-between items-center h-20'>
 						{/* Logo */}
-						<div className='flex-shrink-0 flex items-center'>
-							<a href='#home' className='flex items-center gap-2'>
-								<span className='text-primary-dark dark:text-primary text-3xl font-heading font-black tracking-tighter'>
-									GORILLA<span className='text-dark dark:text-light'>FIT</span>
+						<div class='flex-shrink-0 flex items-center'>
+							<a href='#home' class='flex items-center gap-3'>
+								<img src={logo} alt="Gorilla Fit Logo" class="w-12 h-12 object-contain rounded-full border-2 border-primary shadow-lg" />
+								<span class='text-primary-dark dark:text-primary text-3xl font-heading font-black tracking-tighter'>
+									GORILLA<span class='text-dark dark:text-light'>FIT</span>
 								</span>
 							</a>
 						</div>

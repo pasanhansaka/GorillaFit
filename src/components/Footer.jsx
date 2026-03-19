@@ -1,4 +1,5 @@
 import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from 'react-icons/fi';
+import logo from '../assets/gym-logo.jpg';
 
 export default function Footer() {
   return (
@@ -7,7 +8,8 @@ export default function Footer() {
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-12 mb-12'>
 					{/* Brand Info */}
 					<div className='col-span-1 md:col-span-1'>
-						<a href='#home' className='flex items-center gap-2 mb-4'>
+						<a href='#home' className='flex items-center gap-3 mb-4'>
+							<img src={logo} alt="Gorilla Fit Logo" className="w-10 h-10 object-contain rounded-full border-2 border-primary shadow-lg" />
 							<span className='text-primary text-3xl font-heading font-black tracking-tighter'>
 								GORILLA<span className='text-white'>FIT</span>
 							</span>
