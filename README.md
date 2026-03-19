@@ -1,20 +1,61 @@
-<<<<<<< HEAD
-# React + Vite
+# 🦍 Gorilla Fitness — Transform Your Life
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, fully responsive gym & fitness landing page built with React, Vite, and Tailwind CSS. Designed to showcase gym services, inspire visitors to take action, and enable direct contact through integrated email functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Overview
 
-## React Compiler
+**Gorilla Fitness** is a high-performance gym website built as part of an internship project at KonceptHive. It features smooth animations, a clean modern UI, and a fully functional contact form — all delivered as a blazing-fast static site.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# King-Kong-Fitness
->>>>>>> 8d78e7ba589defe3daaf9cea95efe1b79d9271c8
+- 🏋️ **Hero Section** — Bold, motivating landing area with a clear call-to-action
+- 📋 **Services & Programs** — Showcase of gym offerings and training programs
+- 👥 **Trainers Section** — Meet the expert coaching team
+- 💰 **Pricing Plans** — Transparent membership tiers
+- 📬 **Contact Form** — Email integration via EmailJS (no backend required)
+- 🎞️ **Smooth Animations** — Powered by Framer Motion for polished transitions
+- 📱 **Fully Responsive** — Mobile-first design using Tailwind CSS
+- ⚡ **Lightning Fast** — Built with Vite for optimal build performance
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 19 | UI framework |
+| Vite 8 | Build tool & dev server |
+| Tailwind CSS 4 | Utility-first styling |
+| Framer Motion | Animations & transitions |
+| React Hook Form | Form state management |
+| EmailJS | Client-side email sending |
+| React Icons | Icon library |
+| gh-pages | GitHub Pages deployment |
+
+---
+
+
+**Live site:** [https://pasanhansaka.github.io/Gorilla-Fitness](https://pasanhansaka.github.io/Gorilla-Fitness)
+
+---
+
+## 📁 Project Structure
+
+```
+Gorilla-Fitness/
+├── public/               # Static assets
+├── src/
+│   ├── assets/           # Images and media
+│   ├── components/       # Reusable UI components
+│   ├── sections/         # Page sections (Hero, About, Pricing, etc.)
+│   ├── App.jsx           # Root component
+│   └── main.jsx          # Entry point
+├── .env.example          # Environment variable template
+├── index.html            # HTML entry point
+├── vite.config.js        # Vite configuration
+└── package.json          # Project dependencies
+```
