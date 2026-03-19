@@ -4,12 +4,12 @@ import { TrainerCard } from './Cards';
 export default function Trainers() {
   const trainers = [
     {
-      name: 'Marcus Johnson',
+      name: 'John Cina',
       specialty: 'Head Coach & Strength',
       image: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1974&auto=format&fit=crop'
     },
     {
-      name: 'Sarah Connor',
+      name: 'Roman Range',
       specialty: 'HIIT & Cardio Expert',
       image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=2000&auto=format&fit=crop'
     },
@@ -19,7 +19,7 @@ export default function Trainers() {
       image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=2070&auto=format&fit=crop'
     },
     {
-      name: 'Elena Rodriguez',
+      name: 'Mona Lisa',
       specialty: 'Nutritionist',
       image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop'
     }
@@ -67,13 +67,13 @@ export default function Trainers() {
             className="mt-6 md:mt-0"
           >
             <a href="#" className="inline-flex items-center text-primary font-bold hover:text-primary-dark transition-colors">
-              View All Trainers 
+              View All Trainers
               <span className="ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
             </a>
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
